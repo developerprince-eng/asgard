@@ -17,5 +17,5 @@ steps:
   displayName: 'Running Test'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
+- script: cd .. && dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
