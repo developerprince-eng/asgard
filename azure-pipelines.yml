@@ -15,6 +15,13 @@ steps:
     sudo dpkg -i packages-microsoft-prod.deb
   displayName: 'Set up Dotnet'
 - script: |
+    sudo add-apt-repository universe
+    sudo apt-get update
+    sudo apt-get install apt-transport-https
+    sudo apt-get update
+  displayName: 'Installing Dotnet'
+sudo apt-get install dotnet-sdk-3.1
+- script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
